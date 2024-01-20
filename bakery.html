@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Bakery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .header {
+        text-align: center;
+        padding: 10px;
+        background-color: #f8f9fa;
+      }
+      .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .product-card {
+        border: 1px solid #dee2e6;
+        margin: 10px;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Welcome to My Bakery!</h1>
+    </div>
+    <div class="product-grid" id="productGrid">
+      <!-- Products will be added here by JavaScript -->
+    </div>
+
+    <script>
+      var products = [
+        { name: "Croissant", price: "$2.99" },
+        { name: "Baguette", price: "$1.49" },
+        // Add more products as needed
+      ];
+
+      var productGrid = document.getElementById("productGrid");
+
+      for (var i = 0; i < products.length; i++) {
+        var productCard = document.createElement("div");
+        productCard.className = "product-card";
+
+        var productName = document.createElement("h2");
+        productName.textContent = products[i].name;
+        productCard.appendChild(productName);
+
+        var productPrice = document.createElement("p");
+        productPrice.textContent = products[i].price;
+        productCard.appendChild(productPrice);
+
+        productGrid.appendChild(productCard);
+      }
+    </script>
+  </body>
+</html>

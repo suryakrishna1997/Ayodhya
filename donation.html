@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add the Tailwind CSS CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Donation.css" />
+
+    <title>Payment Page</title>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-blue-100 p-6">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="text-xl font-semibold text-black-500" href="#"
+          >Lord Srirama Charity</a
+        >
+        <ul class="flex space-x-4">
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="Index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="#">About</a>
+          </li>
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="donation.html"
+              >Donate</a
+            >
+          </li>
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="Contact.html"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              id="darkModeToggle"
+              class="text-gray-700 hover:text-blue-500"
+              href="#"
+              >DarkMode 🌙</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Payment Accordion Section -->
+    <div class="accordion">
+      <!-- UPI -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>UPI</span>
+          <span>&#9660;</span>
+        </div>
+        <div class="accordion-content">
+          <p>Enter UPI payment details here.</p>
+        </div>
+      </div>
+
+      <!-- Credit Card -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Credit Card</span>
+          <span>&#9660;</span>
+        </div>
+        <div class="accordion-content">
+          <p>Enter Credit Card payment details here.</p>
+          <form>
+            <div class="form-group">
+              <label for="cardNumber">Card Number:</label>
+              <input
+                type="text"
+                id="cardNumber"
+                name="cardNumber"
+                placeholder="**** **** **** ****"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="expiryDate">Expiry Date:</label>
+              <input
+                type="text"
+                id="expiryDate"
+                name="expiryDate"
+                placeholder="MM / YY"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cardHolderName">Cardholder Name:</label>
+              <input
+                type="text"
+                id="cardHolderName"
+                name="cardHolderName"
+                placeholder="John Doe"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" name="cvv" placeholder="123" />
+            </div>
+
+            <div class="form-group">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Debit Card -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Debit Card</span>
+          <span>&#9660;</span>
+        </div>
+        <div class="accordion-content">
+          <p>Enter Debit Card payment details here.</p>
+        </div>
+      </div>
+
+      <!-- Netbanking -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Netbanking</span>
+          <span>&#9660;</span>
+        </div>
+        <div class="accordion-content">
+          <p>Enter Netbanking payment details here.</p>
+        </div>
+      </div>
+    </div>
+    <!-- End of Payment Accordion Section -->
+
+    <script>
+      function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(".accordion-item");
+        const darkModeToggle = document.getElementById("darkModeToggle");
+
+        accordionItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            this.classList.toggle("active");
+          });
+        });
+
+        darkModeToggle.addEventListener("click", toggleDarkMode);
+      });
+    </script>
+  </body>
+</html>

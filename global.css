@@ -1,0 +1,42 @@
+body.dark-mode #card {
+  /* Dark mode styles go here */
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+#headertext {
+  position: relative;
+  top: -200px;
+  right: -90px;
+  color: white;
+  text-shadow: 2px 2px 5px #000; /* Fix: Use text-shadow instead of text-shadowed */
+}
+
+#headertext1 {
+  position: relative;
+  top: -200px;
+  right: -70px;
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+  /* background-color: aqua; */
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease, background-color 0.3s ease; /* Shorthand transition property */
+}
+
+a:hover {
+  text-decoration: underline;
+  /* background-color: magenta; */
+}
+#card {
+  /* Other styles for your card */
+  width: 320px;
+  height: 360px;
+  transition: transform 0.3s ease; /* Add transition for a smooth effect */
+}
+
+#card:hover {
+  transform: scale(1.05); /* Increase the size by 5% on hover */
+}

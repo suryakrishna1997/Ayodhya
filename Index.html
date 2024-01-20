@@ -1,0 +1,206 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add the Tailwind CSS CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="global.css" />
+    <title>Lord Srirama Charity</title>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-100 p-6">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="text-xl font-semibold text-black-500" href="#"
+          >Lord Srirama Charity</a
+        >
+        <ul class="flex space-x-4">
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="#">Home</a>
+          </li>
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="#">About</a>
+          </li>
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="donation.html"
+              >Donate</a
+            >
+          </li>
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="Contact.html"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a class="text-gray-700 hover:text-blue-500" href="tourism.html"
+              >Tourism</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="toggleDarkMode()"
+              class="text-gray-700 hover:text-blue-500"
+              href="#"
+              >DarkMode 🌙</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Background Image and Main Content -->
+    <div
+      class="bg-cover bg-center h-screen flex items-center"
+      style="
+        background-image: url('images/pexels-koushalya-karthikeyan-18362045.jpg');
+      "
+    >
+      <div class="container mx-auto text-white text-right top-right p-8 mt-5">
+        <h1
+          id="headertext"
+          class="text-5xl text-black font-semibold mb-4 text-align: right"
+        >
+          Welcome to Ayodhya Ram Mandir
+        </h1>
+        <p id="headertext1" class="text-lg mb-8 text-black">
+          Bringing hope and support to those in need in the name of Lord
+          Srirama.
+        </p>
+        <!-- You can add more content here as needed -->
+      </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div
+      class="container mx-auto my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    >
+      <!-- Card 1: Lord Rama's History -->
+      <div id="card" class="bg-white p-6 rounded-md shadow-md">
+        <img
+          src="images/image1.jpg"
+          alt="Lord Rama's History Image"
+          class="mb-4 w-full h-40 object-cover rounded-md"
+        />
+        <h2 class="text-xl font-semibold mb-2">Lord Rama's History</h2>
+        <p class="text-gray-700">
+          Provide information about Lord Rama's historical background and
+          significance.
+        </p>
+      </div>
+      <div id="card" class="bg-white p-6 rounded-md shadow-md">
+        <img
+          src="images/image2.jpg"
+          alt="Lord Rama's History Image"
+          class="mb-4 w-full h-40 object-cover rounded-md"
+        />
+        <h2 class="text-xl font-semibold mb-2">Lord Rama's History</h2>
+        <p class="text-gray-700">
+          Provide information about Lord Rama's historical background and
+          significance.
+        </p>
+      </div>
+      <div id="card" class="bg-white p-6 rounded-md shadow-md">
+        <img
+          src="images/image3.jpg"
+          alt="Lord Rama's History Image"
+          class="mb-4 w-full h-40 object-cover rounded-md"
+        />
+        <h2 class="text-xl font-semibold mb-2">Lord Rama's History</h2>
+        <p class="text-gray-700">
+          Provide information about Lord Rama's historical background and
+          significance.
+        </p>
+      </div>
+      <div id="card" class="bg-white p-6 rounded-md shadow-md">
+        <img
+          src="images/balkand.jpg"
+          alt="Lord Rama's History Image"
+          class="mb-4 w-full h-40 object-cover rounded-md"
+        />
+        <h2 class="text-xl font-semibold mb-2">Lord Rama's History</h2>
+        <p class="text-gray-700">
+          Provide information about Lord Rama's historical background and
+          significance.
+        </p>
+      </div>
+
+      <!-- Card 2: Lord Rama's Mythology -->
+      <div id="card" class="bg-white p-6 rounded-md shadow-md">
+        <img
+          src="images/aranya.jpg"
+          alt="Lord Rama's History Image"
+          class="mb-4 w-full h-40 object-cover rounded-md"
+        />
+        <h2 class="text-xl font-semibold mb-2">Lord Rama's Mythology</h2>
+        <p class="text-gray-700">
+          Share stories and mythological aspects related to Lord Rama's life and
+          adventures.
+        </p>
+      </div>
+      <div id="card" class="bg-white p-6 rounded-md shadow-md">
+        <img
+          src="images/balkand.jpg"
+          alt="Lord Rama's History Image"
+          class="mb-4 w-full h-40 object-cover rounded-md"
+        />
+        <h2 class="text-xl font-semibold mb-2">Lord Rama's Mythology</h2>
+        <p class="text-gray-700">
+          Share stories and mythological aspects related to Lord Rama's life and
+          adventures.
+        </p>
+      </div>
+    </div>
+    <!-- End of Cards Section -->
+
+    <!-- Additional Content Section (Below Background Image) -->
+    <div class="container mx-auto my-8 p-4 bg-white rounded-md shadow-md">
+      <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
+      <p class="text-gray-700">
+        Describe your charity's mission and goals here.
+      </p>
+      <!-- You can add more content here as needed -->
+    </div>
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4">
+          <a href="#" target="_blank">
+            <img
+              src="images/icons8-facebook-48.png"
+              alt="Facebook"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="#" target="_blank">
+            <img
+              src="images/icons8-twitter.gif"
+              alt="Instagram"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="#" target="_blank">
+            <img
+              src="images/icons8-youtube.gif"
+              alt="YouTube"
+              class="w-6 h-6"
+            />
+          </a>
+        </div>
+        <!-- Copyright Section -->
+        <div>&copy; 2024 Ayodhya Rama. All rights reserved.</div>
+      </div>
+    </footer>
+    <script>
+      function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>
